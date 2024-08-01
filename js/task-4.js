@@ -1,13 +1,16 @@
 //mission-4 - The Unique Names
 const getTotalBalanceByGender = (users, gender) => {
-  return users.reduce((total, user) => {
-    return user.gender === gender ? total + user.balance : total;
-  }, 0);
+  return users
+    .filter(user => user.gender === gender)
+    .reduce((total, user) => total + user.balance, 0);
 };
+//filter metodu ile kadin ve erkek olarak filtreleyen bir dizi oluşturuldu, reduce ile toplama işlemi yapıldı.
 
 
-const allUsers = [
-	{
+
+// allUsers global olarak tanımlandı hatası aldım consol da, bu da task 2 de tanımlı olmasından kaynaklı,yeniden tanımlamak yerine başka bir isim kullanıldı.
+const usersList = [
+  {
     name: "Moore Hensley",
     gender: "male",
     balance: 2811
@@ -44,6 +47,5 @@ const allUsers = [
   }
 ];
 
-console.log(getTotalBalanceByGender(allUsers, "male")); // 12053
-
-console.log(getTotalBalanceByGender(allUsers, "female")); // 8863
+console.log(getTotalBalanceByGender(usersList, "male")); // 12053
+console.log(getTotalBalanceByGender(usersList, "female")); // 8863
