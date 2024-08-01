@@ -1,8 +1,11 @@
+//mission 4-Total Balance by Gender
 const getTotalBalanceByGender = (users, gender) => {
   return users
     .filter(user => user.gender === gender)
     .reduce((total, user) => total + user.balance, 0);
 };
+//*filter metodu, users dizisini dolaşıp gender parametresi ile eşleşen cinsiyetteki kullanıcıları içeren yeni bir dizi oluşturur. 
+//*reduce metodu, bu dizi uzerinden toplama islemi yapar.
 
 const allUsers = [
   {

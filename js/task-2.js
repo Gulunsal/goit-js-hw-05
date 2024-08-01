@@ -1,3 +1,4 @@
+//mission 2- Users With Friends
 const getUsersWithFriend = (users, friendName) => {
   return users.filter(user => user.friends.includes(friendName));
 };

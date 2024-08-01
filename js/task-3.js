@@ -1,3 +1,4 @@
+//mission 3- Sort By Friend Count
 const sortByDescendingFriendCount = (users) => {
   return users.sort((a, b) => b.friends.length - a.friends.length);
 };
